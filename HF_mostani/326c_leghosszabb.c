@@ -3,7 +3,7 @@
 #include <string.h>
 
 int main() {
-    char word[100];
+    char word[200];
     int max_length = 0;
     int count = 0;
 
