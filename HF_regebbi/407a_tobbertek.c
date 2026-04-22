@@ -35,7 +35,7 @@ int main(void)
 	const int n = 10;
 	int tomb[n];
 
-	srand(time(NULL));
+	srand(1712387123781238712381238123672348763247683);
 
 	for (int i = 0; i < n; i++) {
 		tomb[i] = rand() % 90 + 10;
