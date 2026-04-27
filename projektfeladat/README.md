@@ -9,10 +9,10 @@ A program célja:    - Létrehoz egy alap nevű forráskódot a parancsori argum
 A program használata: Futtatáskor parancssori argumentumként meg kell adni a nyelvet vagy egy kapcsolót a következő módon: alap nyelvazonosító VAGY kapcsoló
 
 Jelenleg támogatott nyelvek:
-c  : C forraskod, main.c
-py : Python forraskod, main.py
-js : JavaScript forraskod, main.js
-sh : Bash forraskod, main.sh
+c  : C forraskod, main.c; 
+py : Python forraskod, main.py; 
+js : JavaScript forraskod, main.js; 
+sh : Bash forraskod, main.sh; 
 
 Használható kapcsolók:
 -h, --help    : Rovid leiras a programban megadhato kapcsolokrol es nyelvekrol
