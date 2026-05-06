@@ -8,16 +8,16 @@ A program célja:
     "Ugyanazt a kódot NE ismételjük meg még egyszer! Pl. a C nyelv forráskódját, amit generálni akarunk, ne tároljuk el kétszer!"
     "A programunkban tárolt forráskódok legyenek könnyen módosíthatóak! Vagyis nem egyetlenegy sorba kellene belenyomni a komplett forráskódot!"
 
-A program használata: 
-
-    Futtatáskor parancssori argumentumként meg kell adni a nyelvet vagy egy kapcsolót a következő módon: alap nyelvazonosító VAGY kapcsoló
+A program használata: Futtatáskor parancssori argumentumként meg kell adni a nyelvet vagy egy kapcsolót a következő módon: 
+    
+    alap nyelvazonosító VAGY kapcsoló
 
 Jelenleg támogatott nyelvek:
 
-    c  : C forraskod, main.c
-    py : Python forraskod, main.py
-    js : JavaScript forraskod, main.js
-    sh : Bash forraskod, main.sh
+    c  : C forraskod, main.c; 
+    py : Python forraskod, main.py; 
+    js : JavaScript forraskod, main.js; 
+    sh : Bash forraskod, main.sh; 
 
 Használható kapcsolók:
 
