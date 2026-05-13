@@ -1,4 +1,4 @@
-Az 'alap' nevű program a DE-IK Bsc-MI 2.félév, Programozási nyelvek 1.(INBMM0211E) nevű tárgyához készült félévvégi projektfeladat.
+Az alap nevű program a DE-IK Bsc-MI 2.félév, Programozási nyelvek 1.(INBMM0211E) nevű tárgyához készült félévvégi projektfeladat.
 
 A program célja:   
 
