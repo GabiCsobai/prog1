@@ -5,7 +5,7 @@
 
 //Legujabb verzio
 
-#define VERSION "v1.1.3"
+#define VERSION "0.1.4"
 
 typedef struct {
     char *nyelv_id;
@@ -15,16 +15,47 @@ typedef struct {
 } Alap;
 
 const Alap adatbazis[] = {
-    {"c", "C forraskod", "main.c", "#include <stdio.h>\n\nint main() {\n\n    return 0;\n}\n"},
-    {"py", "Python forraskod", "main.py", "def main():\n    pass\n\nif __name__ == \"__main__\":\n    main()\n"},
-    {"js", "Javascript forraskod", "main.js", "console.log('Hello World');\n"},
-    {"sh", "Bash forraskod", "main.sh", "#!/bin/bash\n\necho 'Hello World'\n"}
+    {
+        "c",
+        "C forraskod",
+        "main.c",
+        "#include <stdio.h>\n"
+        "\n"
+        "int main() {\n"
+        "    printf(\"Hello World\\n\");\n"
+        "    return 0;\n"
+        "}\n"
+    },
+    {
+        "py",
+        "Python forraskod",
+        "main.py",
+        "def main():\n"
+        "    print(\"Hello World\")\n"
+        "\n"
+        "if __name__ == \"__main__\":\n"
+        "    main()\n"
+    },
+    {
+        "js",
+        "Javascript forraskod",
+        "main.js",
+        "console.log('Hello World');\n"
+    },
+    {
+        "sh",
+        "Bash forraskod",
+        "main.sh",
+        "#!/bin/bash\n"
+        "\n"
+        "echo 'Hello World'\n"
+    }
 };
 
 int nyelvek_szama = sizeof(adatbazis) / sizeof(adatbazis[0]);
 
 void help() {
-    printf("'alap' %s\n\nHasznalat: ./alap.out <nyelv_id> [--stdout](opcionalis) | [-v | --version] [-h | --help]\n\n", VERSION);
+    printf("alap v%s\n\nHasznalat: ./a.out <nyelv_id> [--stdout](opcionalis) | [-v | --version] [-h | --help]\n\n", VERSION);
     printf("Hasznalhato kapcsolok:\n");
     printf("  -h, --help      Rovid leiras a programban megadhato kapcsolokrol es nyelvekrol\n");
     printf("  -v, --version   Aktualis verzioszam\n");
@@ -43,14 +74,14 @@ int main(int argc, char *argv[]) {
     }
 
     if (strcmp(argv[1], "-v") == 0 || strcmp(argv[1], "--version") == 0) {
-        printf("Az 'alap' program verzioja: %s\n", VERSION);
+        printf("Az alap program verzioja: %s\n", VERSION);
         return 0;
     }
 
     int stdout_mode = (argc == 3 && strcmp(argv[2], "--stdout") == 0);
     int id = -1;
 
-    if (argc > 2 && (strcmp(argv[2], "--stdout") != 0)) {
+    if (argc > 2 && stdout_mode != 1) {
         fprintf(stderr, "Hiba! Maximum 2 argumentumot lehet megadni, es a masodik csak az '--stdout' lehet!");
         exit(1);
     }
