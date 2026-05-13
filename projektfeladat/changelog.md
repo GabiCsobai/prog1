@@ -49,4 +49,8 @@ A program használata: Futtatáskor parancssori argumentumként meg kell adni a 
 
     4. Verzio 1.1.2
         Ha a létrehozandó fájl már létezik, nem írja felül, hanem figyelmezteti a felhasználót(valószínüleg már létrehozta egyszer, érdemes átnevezni egyből a létrehozott fájt)
+
+    5. Verzio 1.1.3
+        Helyesírási hibák illetve fogalmazási pontatlanságok javítása
+        Az Alap strukturám konstanssá tettem, mert a módosítására nincs szükség a program futtatásánál
     
