@@ -20,13 +20,13 @@ A program használata: Futtatáskor parancssori argumentumként meg kell adni a 
 
 2.lépés: Megvalósítás
 
-    1. Verzio 1.0.0 (Forráskódok létrehozása, nyelvek megadása)
+    1. Verzio 0.1.0 (Forráskódok létrehozása, nyelvek megadása)
         Négy különféle programozási nyelvet kell tudnia kezelni a programnak, én a C-t, a Bash-t, a JavaScript-et, és a Python-t választottam, mivel ezeket ismerem és ezekben már programoztam.
         Létrehoztam egy struktúrát, aminek az elemei a nyelv azonosítója(nyelv_id), a létrehozandó fájl neve(fnev) és a forráskód(sablon).
         Hozzáadtam a struktúra elemeihez tartozó értékeket
         A kiválasztandó nyelvet egy for ciklus segítségével keresem meg a fájlban ami a nyelvek számáig megy (i<4), ha megegyezik valamelyik nyelvvel létrehozza a fájlt.(strcmpvel hasonlítja össze a megadott argumentumot a struktura elemeivel)
     
-    2.Verzio 1.0.1(Nyelvekkel kapcsolatos hibauzenetek kiirasa)
+    2.Verzio 0.1.1(Nyelvekkel kapcsolatos hibauzenetek kiirasa)
         stdlib.h headerállomány használata, azon belül is az stderr használata hibaüzenetekhez
         Ha nem talált megegyező nyelvet, akkor hibát ír.
         Ha az argumentumban nem szerepel érték, hibát ír. *c1
@@ -34,7 +34,7 @@ A program használata: Futtatáskor parancssori argumentumként meg kell adni a 
         
         
         
-    3. Verzio 1.1.0 (Kapcsolók implementálása)
+    3. Verzio 0.2.0 (Kapcsolók implementálása)
         A programnak tudnia kell 3 kapcsolót is kezelnie
         A kapcsolókat egy if függvény segítségével tesztelem, hogy a parancssori argumentumban megadott string az megegyezik-e valamelyik kapcsolónevemmel, ha nem, akkor továbbmegy a nyelv keresésére(strcmpvel hasonlítja össze a megadott argumentumot a kapcsolókkal)
         A --help kapcsolónak ki kell írnia egy rövid leírást, ezt egy void help() függvény segítségével oldottam meg
@@ -43,14 +43,17 @@ A program használata: Futtatáskor parancssori argumentumként meg kell adni a 
         *c1 A 2.pontban említett 0 argumentumos hívás esetén nem hibát ír mostmár, hanem a help eljárást futtatja.
 
 
-    3. Verzio 1.1.1(Kapcsolókkal kapcsolatos hibaüzenetek)
+    3. Verzio 0.2.1(Kapcsolókkal kapcsolatos hibaüzenetek)
         Ha az stdout kapcsolót használjuk az stdout_mode valtozot 1re allitom. Utána tesztelem a nyelveket egy id segítségével. Az id alapértéke -1, amit átállítok a megtalált nyelv indexére, ha talál nyelvet, ha nem, akkor hibaüzenetet dob. Ha talál nyelvet, megnézi az stdout_mode nevu valtozot, ha 1 akkor parancsorba irja a forrasfajlt, ha 0 akkor új fájlt hoz létre
         *c2 Ha az argumentumban 2 érték szerepl, és abból a második az --stdout, akkor nem ad hibát, ha máshogyan szerepl több érték hibát dob. 
 
-    4. Verzio 1.1.2
+    4. Verzio 0.2.2
         Ha a létrehozandó fájl már létezik, nem írja felül, hanem figyelmezteti a felhasználót(valószínüleg már létrehozta egyszer, érdemes átnevezni egyből a létrehozott fájt)
 
-    5. Verzio 1.1.3
+    5. Verzio 0.2.3
         Helyesírási hibák illetve fogalmazási pontatlanságok javítása
         Az Alap strukturám konstanssá tettem, mert a módosítására nincs szükség a program futtatásánál
-    
+        
+    6. Verzio 0.2.4
+        A forráskódok átláthatóbbá tétele, külön sorba lettek írva(könnyebb módosítás)
+        A VERSION globális konstansban csak a szám szerepel, elé a 'v' betűt a kiiratásnál teszem oda
