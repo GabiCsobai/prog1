@@ -3,7 +3,9 @@
 #include <string.h>
 #include <unistd.h>
 
-#define VERSION "v1.1.2"
+//Legujabb verzio
+
+#define VERSION "v1.1.3"
 
 typedef struct {
     char *nyelv_id;
@@ -12,7 +14,7 @@ typedef struct {
     char *sablon;
 } Alap;
 
-Alap adatbazis[] = {
+const Alap adatbazis[] = {
     {"c", "C forraskod", "main.c", "#include <stdio.h>\n\nint main() {\n\n    return 0;\n}\n"},
     {"py", "Python forraskod", "main.py", "def main():\n    pass\n\nif __name__ == \"__main__\":\n    main()\n"},
     {"js", "Javascript forraskod", "main.js", "console.log('Hello World');\n"},
@@ -22,7 +24,7 @@ Alap adatbazis[] = {
 int nyelvek_szama = sizeof(adatbazis) / sizeof(adatbazis[0]);
 
 void help() {
-    printf("'alap' %s\n\nHasznalat: alap <nyelv_id> [-k,--kapcsolo]\n\n", VERSION);
+    printf("'alap' %s\n\nHasznalat: ./alap.out <nyelv_id> [--stdout](opcionalis) | [-v | --version] [-h | --help]\n\n", VERSION);
     printf("Hasznalhato kapcsolok:\n");
     printf("  -h, --help      Rovid leiras a programban megadhato kapcsolokrol es nyelvekrol\n");
     printf("  -v, --version   Aktualis verzioszam\n");
